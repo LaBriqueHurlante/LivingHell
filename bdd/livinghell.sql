@@ -164,6 +164,7 @@ CREATE TABLE IF NOT EXISTS `cdnl_livinghell`.`utilisateur` (
   `pwd` VARCHAR(45) NULL,
   `avatar` VARCHAR(45) NULL,
   `niveau` VARCHAR(45) NULL,
+  `xp` INT NULL,
   PRIMARY KEY (`id_uti`))
 ENGINE = InnoDB;
 
@@ -190,6 +191,86 @@ CREATE TABLE IF NOT EXISTS `cdnl_livinghell`.`score` (
   CONSTRAINT `fk_score_utilisateur1`
     FOREIGN KEY (`id_uti`)
     REFERENCES `cdnl_livinghell`.`utilisateur` (`id_uti`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `cdnl_livinghell`.`badge`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `cdnl_livinghell`.`badge` ;
+
+CREATE TABLE IF NOT EXISTS `cdnl_livinghell`.`badge` (
+  `id_badge` INT NOT NULL,
+  `contenu` VARCHAR(45) NULL,
+  `id_tag` INT NOT NULL,
+  PRIMARY KEY (`id_badge`),
+  INDEX `fk_badge_tag1_idx` (`id_tag` ASC),
+  CONSTRAINT `fk_badge_tag1`
+    FOREIGN KEY (`id_tag`)
+    REFERENCES `cdnl_livinghell`.`tag` (`id_tag`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `cdnl_livinghell`.`utilisateur_badge`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `cdnl_livinghell`.`utilisateur_badge` ;
+
+CREATE TABLE IF NOT EXISTS `cdnl_livinghell`.`utilisateur_badge` (
+  `id_uti` INT NOT NULL,
+  `id_badge` INT NOT NULL,
+  PRIMARY KEY (`id_uti`, `id_badge`),
+  INDEX `fk_utilisateur_has_badge_badge1_idx` (`id_badge` ASC),
+  INDEX `fk_utilisateur_has_badge_utilisateur1_idx` (`id_uti` ASC),
+  CONSTRAINT `fk_utilisateur_has_badge_utilisateur1`
+    FOREIGN KEY (`id_uti`)
+    REFERENCES `cdnl_livinghell`.`utilisateur` (`id_uti`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_utilisateur_has_badge_badge1`
+    FOREIGN KEY (`id_badge`)
+    REFERENCES `cdnl_livinghell`.`badge` (`id_badge`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `cdnl_livinghell`.`niveau`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `cdnl_livinghell`.`niveau` ;
+
+CREATE TABLE IF NOT EXISTS `cdnl_livinghell`.`niveau` (
+  `id_niveau` INT NOT NULL AUTO_INCREMENT,
+  `nom` VARCHAR(45) NULL,
+  PRIMARY KEY (`id_niveau`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `cdnl_livinghell`.`utilisateur_niveau`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `cdnl_livinghell`.`utilisateur_niveau` ;
+
+CREATE TABLE IF NOT EXISTS `cdnl_livinghell`.`utilisateur_niveau` (
+  `id_uti` INT NOT NULL,
+  `id_niveau` INT NOT NULL,
+  `maj` DATETIME NULL,
+  PRIMARY KEY (`id_uti`, `id_niveau`),
+  INDEX `fk_utilisateur_has_niveau_niveau1_idx` (`id_niveau` ASC),
+  INDEX `fk_utilisateur_has_niveau_utilisateur1_idx` (`id_uti` ASC),
+  CONSTRAINT `fk_utilisateur_has_niveau_utilisateur1`
+    FOREIGN KEY (`id_uti`)
+    REFERENCES `cdnl_livinghell`.`utilisateur` (`id_uti`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_utilisateur_has_niveau_niveau1`
+    FOREIGN KEY (`id_niveau`)
+    REFERENCES `cdnl_livinghell`.`niveau` (`id_niveau`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
