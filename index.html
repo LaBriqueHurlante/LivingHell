@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Living Hell</title>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript">
+		function init(){
+			//récupère les questions
+			$.get('r.php',
+        			null,
+        			function(js){
+        				console.log(js);
+        				afficheQuestions(js);
+        			},'json');
+		}
+		function afficheQuestions(rs){
+			rs.forEach(function(r){
+				$("#result").html($("#result").html()+"<div>"+r.contenu+"</div>");
+			});
+		}
+	</script>
+</head>
+
+<body onload="init()">
+
+<div id="result" ></div>
+
+</body>
+
+</html>

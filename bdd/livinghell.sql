@@ -50,17 +50,7 @@ CREATE TABLE IF NOT EXISTS `cdnl_livinghell`.`quest_tag` (
   `id_tag` INT NOT NULL,
   PRIMARY KEY (`id_quiz`, `id_tag`),
   INDEX `fk_questionnaire_has_tag_tag1_idx` (`id_tag` ASC),
-  INDEX `fk_questionnaire_has_tag_questionnaire_idx` (`id_quiz` ASC),
-  CONSTRAINT `fk_questionnaire_has_tag_questionnaire`
-    FOREIGN KEY (`id_quiz`)
-    REFERENCES `cdnl_livinghell`.`quiz` (`id_quiz`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_questionnaire_has_tag_tag1`
-    FOREIGN KEY (`id_tag`)
-    REFERENCES `cdnl_livinghell`.`tag` (`id_tag`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+  INDEX `fk_questionnaire_has_tag_questionnaire_idx` (`id_quiz` ASC))
 ENGINE = InnoDB;
 
 
@@ -70,7 +60,7 @@ ENGINE = InnoDB;
 DROP TABLE IF EXISTS `cdnl_livinghell`.`question` ;
 
 CREATE TABLE IF NOT EXISTS `cdnl_livinghell`.`question` (
-  `id_question` INT NOT NULL,
+  `id_question` INT NOT NULL AUTO_INCREMENT,
   `contenu` VARCHAR(255) NULL,
   `media` VARCHAR(45) NULL,
   `niveau` INT NULL,
@@ -90,17 +80,7 @@ CREATE TABLE IF NOT EXISTS `cdnl_livinghell`.`question_reponse` (
   `explication` VARCHAR(45) NULL,
   INDEX `fk_question_has_reponse_question1_idx` (`id_question` ASC),
   PRIMARY KEY (`id_question`, `id_tag`),
-  INDEX `fk_question_reponse_tag1_idx` (`id_tag` ASC),
-  CONSTRAINT `fk_question_has_reponse_question1`
-    FOREIGN KEY (`id_question`)
-    REFERENCES `cdnl_livinghell`.`question` (`id_question`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_question_reponse_tag1`
-    FOREIGN KEY (`id_tag`)
-    REFERENCES `cdnl_livinghell`.`tag` (`id_tag`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+  INDEX `fk_question_reponse_tag1_idx` (`id_tag` ASC))
 ENGINE = InnoDB;
 
 
@@ -114,17 +94,7 @@ CREATE TABLE IF NOT EXISTS `cdnl_livinghell`.`quest_question` (
   `id_question` INT NOT NULL,
   PRIMARY KEY (`id_quiz`, `id_question`),
   INDEX `fk_quest_has_question_question1_idx` (`id_question` ASC),
-  INDEX `fk_quest_has_question_quest1_idx` (`id_quiz` ASC),
-  CONSTRAINT `fk_quest_has_question_quest1`
-    FOREIGN KEY (`id_quiz`)
-    REFERENCES `cdnl_livinghell`.`quiz` (`id_quiz`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_quest_has_question_question1`
-    FOREIGN KEY (`id_question`)
-    REFERENCES `cdnl_livinghell`.`question` (`id_question`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+  INDEX `fk_quest_has_question_quest1_idx` (`id_quiz` ASC))
 ENGINE = InnoDB;
 
 
@@ -138,17 +108,7 @@ CREATE TABLE IF NOT EXISTS `cdnl_livinghell`.`tag_question` (
   `id_question` INT NOT NULL,
   PRIMARY KEY (`id_tag`, `id_question`),
   INDEX `fk_tag_has_question_question1_idx` (`id_question` ASC),
-  INDEX `fk_tag_has_question_tag1_idx` (`id_tag` ASC),
-  CONSTRAINT `fk_tag_has_question_tag1`
-    FOREIGN KEY (`id_tag`)
-    REFERENCES `cdnl_livinghell`.`tag` (`id_tag`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_tag_has_question_question1`
-    FOREIGN KEY (`id_question`)
-    REFERENCES `cdnl_livinghell`.`question` (`id_question`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+  INDEX `fk_tag_has_question_tag1_idx` (`id_tag` ASC))
 ENGINE = InnoDB;
 
 
@@ -182,17 +142,7 @@ CREATE TABLE IF NOT EXISTS `cdnl_livinghell`.`score` (
   `maj` DATETIME NULL,
   PRIMARY KEY (`id_score`),
   INDEX `fk_score_question1_idx` (`id_question` ASC),
-  INDEX `fk_score_utilisateur1_idx` (`id_uti` ASC),
-  CONSTRAINT `fk_score_question1`
-    FOREIGN KEY (`id_question`)
-    REFERENCES `cdnl_livinghell`.`question` (`id_question`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_score_utilisateur1`
-    FOREIGN KEY (`id_uti`)
-    REFERENCES `cdnl_livinghell`.`utilisateur` (`id_uti`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+  INDEX `fk_score_utilisateur1_idx` (`id_uti` ASC))
 ENGINE = InnoDB;
 
 
@@ -206,12 +156,7 @@ CREATE TABLE IF NOT EXISTS `cdnl_livinghell`.`badge` (
   `contenu` VARCHAR(45) NULL,
   `id_tag` INT NOT NULL,
   PRIMARY KEY (`id_badge`),
-  INDEX `fk_badge_tag1_idx` (`id_tag` ASC),
-  CONSTRAINT `fk_badge_tag1`
-    FOREIGN KEY (`id_tag`)
-    REFERENCES `cdnl_livinghell`.`tag` (`id_tag`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+  INDEX `fk_badge_tag1_idx` (`id_tag` ASC))
 ENGINE = InnoDB;
 
 
@@ -225,17 +170,7 @@ CREATE TABLE IF NOT EXISTS `cdnl_livinghell`.`utilisateur_badge` (
   `id_badge` INT NOT NULL,
   PRIMARY KEY (`id_uti`, `id_badge`),
   INDEX `fk_utilisateur_has_badge_badge1_idx` (`id_badge` ASC),
-  INDEX `fk_utilisateur_has_badge_utilisateur1_idx` (`id_uti` ASC),
-  CONSTRAINT `fk_utilisateur_has_badge_utilisateur1`
-    FOREIGN KEY (`id_uti`)
-    REFERENCES `cdnl_livinghell`.`utilisateur` (`id_uti`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_utilisateur_has_badge_badge1`
-    FOREIGN KEY (`id_badge`)
-    REFERENCES `cdnl_livinghell`.`badge` (`id_badge`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+  INDEX `fk_utilisateur_has_badge_utilisateur1_idx` (`id_uti` ASC))
 ENGINE = InnoDB;
 
 
@@ -262,17 +197,7 @@ CREATE TABLE IF NOT EXISTS `cdnl_livinghell`.`utilisateur_niveau` (
   `maj` DATETIME NULL,
   PRIMARY KEY (`id_uti`, `id_niveau`),
   INDEX `fk_utilisateur_has_niveau_niveau1_idx` (`id_niveau` ASC),
-  INDEX `fk_utilisateur_has_niveau_utilisateur1_idx` (`id_uti` ASC),
-  CONSTRAINT `fk_utilisateur_has_niveau_utilisateur1`
-    FOREIGN KEY (`id_uti`)
-    REFERENCES `cdnl_livinghell`.`utilisateur` (`id_uti`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_utilisateur_has_niveau_niveau1`
-    FOREIGN KEY (`id_niveau`)
-    REFERENCES `cdnl_livinghell`.`niveau` (`id_niveau`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+  INDEX `fk_utilisateur_has_niveau_utilisateur1_idx` (`id_uti` ASC))
 ENGINE = InnoDB;
 
 
