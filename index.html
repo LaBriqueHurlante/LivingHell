@@ -8,7 +8,7 @@
 		function init(){
 			//récupère les questions
 			$.get('r.php',
-        			null,
+        			{fct:"question"},
         			function(js){
         				console.log(js);
         				afficheQuestions(js);
