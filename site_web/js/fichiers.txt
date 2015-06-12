@@ -1,0 +1,4 @@
+tabulous.js
+Tabulous.js est un plugin jQuery permettant de mettre en place un système d'onglets (tabs) avec des effets de transitions modernes.
+http://www.lafermeduweb.net/billet/tabulous-js-des-onglets-tabs-modernes-sous-forme-de-plugin-jquery-1618.html
+

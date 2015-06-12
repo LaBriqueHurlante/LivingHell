@@ -1,0 +1,64 @@
+/*GLOBAL*/
+
+body {
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	background:#000;
+}
+
+/*ELEMENTS*/
+
+ul {
+	margin:0;
+	padding:0;	
+	}
+	
+/*FONTS*/
+
+@font-face{
+    font-family : "zomby";
+	src:url(fonts/ZombieQueen.ttf)
+}
+@font-face{
+    font-family : "refuge";
+	src:url(fonts/Refuge.otf)
+}
+
+/*HEADER*/
+
+#header {
+	height:75px;
+	background:rgba(0,0,0,0.5);
+	border-bottom: solid 1px #fff;
+	position: relative;
+}
+
+ul.menu {
+  text-align: center;
+}
+
+.menu li {
+	color:#fff;
+	display: inline-block;
+	margin: 0 3%;
+	height: 75px;
+  	line-height: 75px;
+	vertical-align: top;
+	
+	font-family: refuge;
+  	font-size: 30px;
+	}
+	
+li.logo {
+	background-image:url(media/img/logo.png);
+	width: 170px;
+	  height: 150px;
+	  background-size: 100%;
+	  background-repeat: no-repeat;
+	}
+
+
+/*MAP*/
+
+#map-overlay img {width:100%;}
