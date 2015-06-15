@@ -31,15 +31,16 @@ ul {
 /*HEADER*/
 
 #header {
-	height:75px;
-	background:rgba(0,0,0,0.5);
-	border-bottom: solid 1px #fff;
-	position: absolute;
+height: 75px;
+  background: rgba(0,0,0,0.9);
+  position: absolute;
+  width: 100%;
+  z-index: 10;
 }
 
 ul.menu {
   text-align: center;
-  display:none;
+
 }
 
 .menu li {
@@ -65,14 +66,16 @@ li.logo {
 
 /*MAP*/
 
-#map-overlay img {width:100%;}
+#map-overlay {
+	background:url(media/img/Campus2.jpg) no-repeat;
+	background-size:cover;	
+	}
 
 /*FOOTER*/
 
 footer {
 position: absolute;
-  bottom: -143px;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.37);
-  height: 60px;
+ width: 100%;
+ background: rgba(0, 0, 0, 0.37);
+ height: 60px;
   	}

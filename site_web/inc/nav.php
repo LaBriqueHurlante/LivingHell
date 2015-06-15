@@ -6,6 +6,6 @@
         <li class="logo"></li>
         <li>Elmt4</li>
         <li>Elmt5</li>
-        <li>Elmt6</li>
+        <li>Connexion</li>
     </ul>
 </nav>
