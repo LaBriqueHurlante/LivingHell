@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Document sans titre</title>
+<title>Zombie Academy</title>
 <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 

@@ -1,0 +1,21 @@
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	margin: 10px;
+	padding: 0px;
+}
+
+.code {
+	font-size: 1.2em;
+	margin-left: 2.0em;
+}
+
+h1 {
+	color: #000077;
+	text-align: center;
+}
+h2 {
+	color: #0000aa;
+	margin: 2.0em 0em 0em 1.0em;
+}
+

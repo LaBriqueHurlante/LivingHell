@@ -15,7 +15,10 @@ ul {
 	}
 	
 /*FONTS*/
-
+@font-face{
+    font-family : "lato";
+	src:url(fonts/Lato-Regular.ttf)
+}
 @font-face{
     font-family : "zomby";
 	src:url(fonts/ZombieQueen.ttf)
@@ -31,11 +34,12 @@ ul {
 	height:75px;
 	background:rgba(0,0,0,0.5);
 	border-bottom: solid 1px #fff;
-	position: relative;
+	position: absolute;
 }
 
 ul.menu {
   text-align: center;
+  display:none;
 }
 
 .menu li {
@@ -62,3 +66,13 @@ li.logo {
 /*MAP*/
 
 #map-overlay img {width:100%;}
+
+/*FOOTER*/
+
+footer {
+position: absolute;
+  bottom: -143px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.37);
+  height: 60px;
+  	}

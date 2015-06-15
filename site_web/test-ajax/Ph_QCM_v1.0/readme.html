@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Ph_QCM : Readme</title>
+<link type="text/css" rel="stylesheet" href="style_readme.css" />
+</head>
+<body>
+
+<h1>Ph_QCM 1.0 : Readme</h1>
+
+<h2>Introduction</h2>
+<p>Ph_QCM est un script écrit en PHP5 qui permet de créer facilement des QCM sur internet grace à une interface conviviale. Les QCM peuvent ensuite être consultés et remplis par les internautes. A la fin du QCM, les résultats sont donnés, ainsi qu'une correction pour chaque question. Ph_QCM n'utilise pas de base de données, ce qui permet de l'installer très facilement et de pouvoir sauvegarder le contenu des QCM à tout instant : il suffit de copier le dossier du script.</p>
+
+<h2>Installation</h2>
+<p>Pour installer Ph_QCM, éditez le fichier "_config.php" présent dans le dossier Ph_QCM et modidiez le mot de passe à votre guise. Copiez ensuite simplement le dossier "Ph_QCM" sur un serveur supportant PHP5 et le tour est joué.</p>
+<p>Pour plus de sécurité, si vous utilisez Apache comme serveur, vous pouvez copier le fichier ".htaccess" présent dans le dossier "protection" dans le dossier du script ("Ph_QCM" par défaut). Les fichiers XML de vos QCM ne seront plus accessibles depuis un navigateur. Cela peut éviter que certains utilisateurs ne lisent les réponses avant de répondre au QCM.</p>
+<p><strong>Remarque pour free</strong> : pour installer le script chez free, vous devez créer un dossier "sessions" à la racine de votre site afin que les sessions PHP fonctionnent correctement. De plus free utilise encore (11/08/2006) PHP4 par défaut pour exécuter les fichiers *.php (et non PHP5, qui est utilisé par ce script). Pour remédier au problème copier le fichier ".htaccess" présent dans le dossier "free" dans le dossier du script ("Ph_QCM" par défaut). Si vous avez déjà copié le premier fichier ".htaccess" du dossier protection, ajoutez le contenu du deuxième fichier au premier.</p>
+
+<h2>Utilisation</h2>
+<p>Pour utiliser le script, rendez-vous sur la page principale du script. Là vous pouvez ouvrir une session Admin en entrant votre mot de passe dans la zone de texte précédée par "Admin &gt;&gt;". Vous pouvez ensuite ajouter un nouveau QCM en cliquant sur "[Créer un nouveau QCM]", puis modifer ce dernier en cliquant sur "Editer le titre" puis "Editer les questions" (Boutons situés sous le cadre du QCM). Une fois le QCM terminé, vous pouvez le visualiser en cliquant sur le titre.</p>
+
+<h2>Historique</h2>
+<p>version 1.0 (11/08/2006) : Première version.</p>
+
+<h2>Contact</h2>
+<p>Tollitte Pierre-Nicolas (destiny3@gmail.com)</p>
+
+<h2>Licence</h2>
+<p class="code"><code>Ph_QCM is free software; you can redistribute it and/or modify<br />
+it under the terms of the GNU General Public License as published by<br />
+the Free Software Foundation; either version 2 of the License, or<br />
+(at your option) any later version.<br />
+<br />
+Ph_QCM is distributed in the hope that it will be useful,<br />
+but WITHOUT ANY WARRANTY; without even the implied warranty of<br />
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the<br />
+GNU General Public License for more details.<br />
+<br />
+You should have received a copy of the GNU General Public License<br />
+along with Ph_QCM; if not, write to the Free Software<br />
+Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA</code></p>
+
+</body>
+</html>

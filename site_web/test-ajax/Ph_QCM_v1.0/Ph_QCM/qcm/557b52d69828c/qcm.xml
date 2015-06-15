@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<qcm><titre>test</titre><description>Bah c'est un test quoi</description><image/><question><q>t'es moche?</q><image/><explic/><reponses><rep bonne="0">nan je suis beau</rep><rep bonne="0">ouais et alors</rep><rep bonne="1">ceci ne te regarde pas</rep></reponses></question><question><q>un jour je me baladais...</q><image></image><explic></explic><reponses><rep bonne="0">Sur le périph</rep><rep bonne="0">sur de la choucroute</rep><rep bonne="1">sur l'avenue</rep></reponses></question></qcm>

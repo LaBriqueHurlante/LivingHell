@@ -1,0 +1,132 @@
+body {
+	background-color: #e6ecff;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 80%;
+	margin: 20px;
+	padding: 0px;
+	text-align: center;
+}
+#page {
+	position: absolute;
+	left: 50%;
+	width: 80%;
+	margin-left: -40%;
+}
+
+hr {
+	background-color: #0060ff; /* firefox */
+	color: #0060ff; /* IE */
+	width: 100%;
+	border: 0px;
+	height: 0.15em;
+}
+input {
+	background-color: #e6ecff;
+	border: 1px solid #0060ff;
+}
+textarea {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color: #e6ecff;
+	border: 1px solid #0060ff;
+	font-size: 1.0em;
+}
+a {
+	text-decoration: none;
+	color: #0060ff;
+}
+a:hover {
+	color: #ff0000;
+}
+img {
+	border: 1px solid;
+}
+form {
+	padding: 0px;
+	margin: 0px;
+}
+
+
+#titre {
+	font-size: 1.5em;
+	padding: 1.0em 1.0em 2.0em 1.0em;
+}
+#admin {
+	margin-bottom: 5.0em;
+}
+
+.cadre {
+	background-color: #ffffff;
+	border: 0.15em solid #0060ff;
+	padding: 10px;
+}
+.entoure_cadre {
+	margin-bottom: 6.0em;
+}
+.titre_cadre {
+	font-size: 1.2em;
+}
+.desc_cadre {
+	text-align: left;
+}
+
+ul {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+li {
+	color: #777777;
+	text-align: center;
+	width: 20%;
+	float: right;
+	background-color: #ffffff;
+	border: 1px dashed #0060ff;
+	border-top: 0px solid;
+	margin-left: 0.5em;
+}
+li a {
+	display: block;
+	width: 100%;
+	padding: 0.3em 0em;
+}
+
+/* visualisation du QCM */
+#voir_question {
+	font-weight: bold;
+	padding: 1.0em;
+	margin-left: 1.0em;
+	margin-right: 1.0em;
+}
+#voir_image {
+	text-align: center;
+}
+#voir_explic {
+	background-color: #e6ecff;
+	padding: 0.3em;
+	margin: 0.7em
+}
+#voir_reponses {
+	margin-left: 5.0em;
+	padding: 2.0em
+}
+#voir_result {
+	text-align: center;
+	font-size: 1.2em;
+}
+.no_border_gauche {
+	border-left: 0px solid;
+}
+.no_border_droite {
+	border-right: 0px solid;
+}
+.blanc {
+	color: #000000;
+}
+.rouge {
+	background-color: #cd0000;
+	color: #ffffff;
+}
+.vert {
+	background-color: #00cd00;
+	color: #ffffff;
+}
