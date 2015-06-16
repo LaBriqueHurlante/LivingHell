@@ -1,11 +1,13 @@
-<nav>
+
+<nav id="menu">
 	<ul class="menu">
-    	<li>Elmt1</li>
-        <li>Elmt2</li>
-        <li>Elmt3</li>
+    	<li><a id="test" href="cours.php">Cours</a></li>
+        <li><a href="quiz.php">Quiz</a></li>
+        <li><a href="">Wikiothèque</a></li>
         <li class="logo"></li>
-        <li>Elmt4</li>
-        <li>Elmt5</li>
-        <li>Connexion</li>
+        <li><a href="">Ateliers de création</a></li>
+        <li><a href="">La Gazette</a></li>
+        <li><a href="">Inscription</a></li>
     </ul>
 </nav>
+ 

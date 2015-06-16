@@ -16,7 +16,7 @@ $(document).ready(function(){
 	})
 
 
-// PARALLAX.JS :  Matthew Wagerfield - @wagerfield
+// PARALLAX.JS : Copyright (C) 2014 Matthew Wagerfield - @wagerfield
 
 ;(function($, window, document, undefined) {
 
