@@ -1,7 +1,7 @@
 // JavaScript Document
 
 $(document).ready(function() {
-    $("#menu a").click(function(){
+    $(".nav a").click(function(){
 		page=$(this).attr("href");
 		$.ajax({
 			url: "core/pages/"+page,

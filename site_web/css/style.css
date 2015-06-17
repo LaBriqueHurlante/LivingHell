@@ -33,6 +33,18 @@ border: none;
 #but_cancel img {
 width:100%;
 }	
+
+/*couleurs*/
+.nav a, .nav a:hover {transition:all linear 0.2s}
+.rouge:hover {color:#F44336}
+.orange:hover {color:#FC9600}
+.jaune:hover {color:#FFEB3B}
+.vert:hover {color:#35CC29}
+.bleu:hover {color:#1E83D4}
+.rose:hover {color:#E91E63}
+.violet:hover {color:#C900C9}
+
+
 /*FONTS*/
 @font-face{
     font-family : "lato";
@@ -88,7 +100,7 @@ li.logo {
 /*POPUP*/
 
 #vignette {
-padding-top: 11%;
+padding-top: 15%;
 z-index: 10;
 position: relative;
 
@@ -239,3 +251,33 @@ position: absolute;
  background: rgba(0, 0, 0, 0.37);
  /*height: 60px;*/
   	}
+
+/*VARIANTE*/
+
+					/*menu*/
+
+#menu2 {
+	padding:15px;
+}
+#menu2 ul {
+	position: absolute;
+}
+#menu2 li {
+	color: #fff;
+  font-family: arial;
+  font-size: 30px;
+  text-align: left;
+  padding: 15px 0px 0px 15px;
+  display: block;
+  margin:0;
+  width: 170px;
+}
+#menu2 #logo {
+	margin-bottom:20px;
+}
+
+
+
+
+
+

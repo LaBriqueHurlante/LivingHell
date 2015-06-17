@@ -5,6 +5,8 @@
 <title>Zombie Academy</title>
 <link href="css/style.css" rel="stylesheet" type="text/css">
 <link href="css/tabulous.css" rel="stylesheet" type="text/css">
+<link href="css/animate.min.css" rel="stylesheet" type="text/css">
+
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery-ui.min.js"></script>
 <script src="js/tabulous/tabulous.min.js"></script>

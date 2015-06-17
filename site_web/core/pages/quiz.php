@@ -19,10 +19,16 @@
 			</div>
 
 		</div><!--End tabs container-->
-		
+<img id="imgTest" src="../site_web/css/media/img/zombie2.png" />			
 	</div><!--End tabs-->
 <script>
+	
+$('#imgTest').hide();
 $(document).ready(function() {
+	$('#imgTest').show().delay( 100 ).animate({
+		top:'140px'
+		});	
+	
 $( "#but_cancel" ).click(function( event ) {
   event.preventDefault();
   $( "#vignette" ).hide("slide", { direction: "right" }, "fast");

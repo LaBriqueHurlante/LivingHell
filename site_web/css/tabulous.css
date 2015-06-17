@@ -33,7 +33,7 @@ a:active,a:focus {
 }
 
 								/*orange*/
-/*FE6A00*/
+
 .tabs_orange .tabs_aside p {
 	background-color: #FC9600 ;
 	color: #ffffff;
@@ -77,6 +77,14 @@ a:active,a:focus {
 #DFE2DB
 #DFE2DB
 #FFFFFF*/
+
+#imgTest {
+  position: absolute;
+  top: 300px;
+  right: 400px;
+  z-index: -1;
+  width:150px;
+}
 
 .tabs_jaune .tabs_aside p {
 	background-color: #FFF056;
