@@ -6,10 +6,103 @@ a:active,a:focus {
 	outline: expression(hideFocus='true');
 }
 
-p {
+.tabs_aside p{
 	margin-bottom: 20px;
+  font-size: 19px;
+  background-color: #544F6B;
+  padding: 1rem;
+  color: #B8AFDA;
+}
+								/*rouge*/
+.tabs_rouge .tabs_aside p {
+	background-color: #F44336;
+	color: #ffffff;
+}
+.tabs_rouge li a {
+	background-color: #F44336;
+	color: #FAA39D;
+	transition:all linear 0.2s;
+}
+.tabs_rouge li a:hover {
+	background-color: #A52A21;
+	color: #FAA39D;
+	transition:all linear 0.2s;
+}
+.tabs_rouge .tabulous_active {
+	color: #F44336 !important;	
 }
 
+								/*orange*/
+/*FE6A00*/
+.tabs_orange .tabs_aside p {
+	background-color: #FC9600 ;
+	color: #ffffff;
+}
+.tabs_orange li a {
+	background-color: #FC9600 ;
+	color: #FFBE5E;
+	transition:all linear 0.2s;
+}
+.tabs_orange li a:hover {
+	background-color: #D07E04;
+	color: #FDCF8C;
+	transition:all linear 0.2s;
+}
+.tabs_orange .tabulous_active {
+	color: #FC9600  !important;	
+}
+
+								/*bleu*/
+.tabs_bleu .tabs_aside p {
+	background-color: #1E83D4;
+	color: #ffffff;
+}
+.tabs_bleu li a {
+	background-color: #0e3d62 ;
+	color: #1E83D4;
+	transition:all linear 0.2s;
+}
+.tabs_bleu li a:hover {
+	background-color: #1E83D4;
+	color: #0e3d62;
+	transition:all linear 0.2s;
+}
+.tabs_bleu .tabulous_active {
+	color: #1E83D4  !important;	
+}
+
+/*jaune*/
+
+/*#191919
+#DFE2DB
+#DFE2DB
+#FFFFFF*/
+
+.tabs_jaune .tabs_aside p {
+	background-color: #FFF056;
+	color: #191919;
+}
+.tabs_jaune li a {
+	background-color: #FFEB3B  ;
+	color: #191919;
+	transition:all linear 0.2s;
+}
+.tabs_jaune li a:hover {
+	background-color: #191919;
+	color: #FFEB3B ;
+	transition:all linear 0.2s;
+}
+.tabs_jaune .tabulous_active {
+	color: #FFEB3B   !important;	
+}
+
+#tabs li a:hover,#tabs2 li a:hover,#tabs3 li a:hover,#tabs4 li a:hover,#tabs5 li a:hover {
+	/*background: rgb(78, 74, 99);*/
+}
+
+#tabs ul {
+	position:relative;	
+}
 #wrapper {
 	width: 960px;
 	margin: 0 auto;
@@ -30,16 +123,16 @@ p {
 #tabs li a,#tabs2 li a,#tabs3 li a,#tabs4 li a,#tabs5 li a {
 	display: block;
 	padding: 17px 30px;
-	background: #544f6b;
+	/*background: #544f6b;*/
 	text-decoration: none;
-	color: #8478B3;
+	/*color: #8478B3;*/
 	
 	font-size: 30px;
   	text-transform: uppercase;
 }
 
 #tabs li a:hover,#tabs2 li a:hover,#tabs3 li a:hover,#tabs4 li a:hover,#tabs5 li a:hover {
-	background: rgb(78, 74, 99);
+	/*background: rgb(78, 74, 99);*/
 }
 
 #tabs_container {

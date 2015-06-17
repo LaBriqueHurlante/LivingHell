@@ -9,6 +9,7 @@
 <script src="js/jquery-ui.min.js"></script>
 <script src="js/tabulous/tabulous.min.js"></script>
 
+
 </head>
 
 <body>
@@ -32,10 +33,11 @@ if(isset($_GET['p'])){
 	}
 }
 else{
-	include $d."bienvenue.php";
+
 }
 
 ?>
+
  </div><!--Vignette tabs-->
  <?php
 include_once ("inc/footer.php");

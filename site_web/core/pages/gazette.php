@@ -2,8 +2,7 @@
 <div id="tabs">
 		<ul>
 			<li><a href="#tabs-1" title="">Gazette!</a></li>
-			<li><a href="#tabs-2" title="">Tab 2</a></li>
-			<li><a href="#tabs-3" title="">Tab 3</a></li>
+			<li><button id="but_cancel"><img src="css/media/img/wrong.png" /></button></li>
 		</ul>
 
 		<div id="tabs_container">
@@ -25,4 +24,11 @@
 		</div><!--End tabs container-->
 		
 	</div><!--End tabs-->
-
+<script>
+$(document).ready(function() {
+$( "#but_cancel" ).click(function( event ) {
+  event.preventDefault();
+  $( "#vignette" ).hide("slide", { direction: "right" }, "fast");
+});
+})
+</script>
