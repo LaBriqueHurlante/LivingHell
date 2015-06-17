@@ -7,8 +7,8 @@
 <link href="css/tabulous.css" rel="stylesheet" type="text/css">
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery-ui.min.js"></script>
-<script src="js/navigation.js"></script>
 <script src="js/tabulous/tabulous.min.js"></script>
+
 </head>
 
 <body>
@@ -42,7 +42,7 @@ include_once ("inc/footer.php");
 
 ?>
 </section>
-
+<script src="js/navigation.js"></script>
 <script src="js/map.js"></script>
 
 </body>

@@ -16,7 +16,7 @@ p {
 	margin-top: 100px;
 }
 #tabs,#tabs2,#tabs3,#tabs4,#tabs5 {
-	width: 500px;
+	width: 60%;
 	margin: 0 auto;
 	margin-bottom: 40px;
 	
@@ -33,6 +33,9 @@ p {
 	background: #544f6b;
 	text-decoration: none;
 	color: #8478B3;
+	
+	font-size: 30px;
+  	text-transform: uppercase;
 }
 
 #tabs li a:hover,#tabs2 li a:hover,#tabs3 li a:hover,#tabs4 li a:hover,#tabs5 li a:hover {
@@ -44,6 +47,7 @@ p {
 	overflow: hidden;
 	position: relative;
 	background: white;
+	min-height: 150px;
 }
 
 #tabs_container div {

@@ -24,8 +24,8 @@ ul {
 	src:url(fonts/Lato-Regular.ttf)
 }
 @font-face{
-    font-family : "zomby";
-	src:url(fonts/ZombieQueen.ttf)
+    font-family : "goth";
+	src: url(fonts/tradeGothic.ttf)
 }
 @font-face{
     font-family : "refuge";

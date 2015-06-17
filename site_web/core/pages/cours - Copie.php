@@ -40,4 +40,15 @@ $('#'+ouvrir).show("slide", { direction: "left" }, "fast");
 
 });
 }
+
+// OU bien
+
+$("#vignette").fadeOut('fast', function(){
+	$("#vignette").empty();
+	$("#vignette").append(data);
+	
+	$("#vignette").fadeIn("fast");
+	
+})
+}
 </script>

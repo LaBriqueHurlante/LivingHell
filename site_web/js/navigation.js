@@ -18,9 +18,12 @@ $(document).ready(function() {
 });
 
 function afficher(data){
-$("#vignette").fadeOut('fast', function(){
+	
+$("#vignette").hide("slide", { direction: "left" }, "fast", function(){
 	$("#vignette").empty();
 	$("#vignette").append(data);
-	$("#vignette").fadeIn("fast");
+	$('#tabs').tabulous({});
+	$("#vignette").show("slide", { direction: "right" }, "fast");
+	
 })
 }
