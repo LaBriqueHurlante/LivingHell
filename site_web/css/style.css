@@ -208,7 +208,7 @@ overflow: hidden;}
   }
 
 .nuage {
-background: url("http://img15.hostingpics.net/pics/505493nuage.png");
+background: url("../../site_web/css/media/img/nuage.png");
 background-position: center center;
 position: absolute;
   width: 300%;
@@ -218,7 +218,7 @@ position: absolute;
 }
 
 .secondplan {
-background: url("http://127.0.0.1/GitHub/LivingHell/site_web/css/media/img/Campus6.jpg");
+background: url("../../site_web/css/media/img/Campus6.jpg");
 background-position: center center;
   background-repeat:no-repeat;
   background-color:#000;
@@ -230,7 +230,7 @@ top: -30%;
 }
 
 .firstplan {
-background: url("http://i.imgur.com/tCniACK.png");
+background: url("../../site_web/css/media/img/filtre.png");
 no-repeat 50% 100%;
 background-size: cover;
 position: absolute;
@@ -272,8 +272,8 @@ position: absolute;
   margin:0;
   width: 170px;
 }
-#menu2 #logo {
-	margin-bottom:20px;
+#menu2 .logo {
+	margin-bottom: 50px;
 }
 
 
