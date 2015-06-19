@@ -1,35 +1,11 @@
 ﻿<?php
 session_start();
 $titre="Connexion";
-$lvl=(isset($_SESSION['level']))?(int) $_SESSION['level']:1;
-$id=(isset($_SESSION['id']))?(int) $_SESSION['id']:0;
-$pseudo=(isset($_SESSION['pseudo']))?$_SESSION['pseudo']:'';
 include("includes/connexBDD.php");
-include("includes/functions.php");
 
-echo '<p><i>Vous êtes ici</i> : <a href="./index.php">Index du forum</a> --> Connexion';
 define('ERR_IS_CO','Vous êtes déja connecté');
 echo '<h1>Connexion</h1>';
-if ($id!=0) erreur(ERR_IS_CO);
-if (!isset($_POST['pseudo'])) //On est dans la page de formulaire
-{
-	echo '<form method="post" action="connexion.php">
-	<fieldset>
-	<legend>Connexion</legend>
-	<p>
-	<label for="pseudo">Pseudo :</label><input name="pseudo" type="text" id="pseudo" /><br />
-	<label for="password">Mot de Passe :</label><input type="password" name="password" id="password" />
-	</p>
-	</fieldset>
-	<p><input type="submit" value="Connexion" /></p></form>
-	<a href="./register.php">Pas encore inscrit ?</a>
-	 
-	</div>
-	</body>
-	</html>';
-}
-else
-{
+
     $message='';
     if (empty($_POST['pseudo']) || empty($_POST['password']) ) //Oublie d'un champ
     {
@@ -65,7 +41,6 @@ else
 	}
     $query->CloseCursor();
     }
-    echo $message.'</div></body></html>';
+    echo $message;
 
-}
 ?>
